@@ -1,0 +1,6 @@
+.form {
+	max-width: 25rem;
+	border: var(--smoke) 2px solid;
+	border-radius: var(--radius-md);
+	margin: 0rem auto;
+}

@@ -1,0 +1,68 @@
+.signIn_page {
+	background: linear-gradient(to bottom, var(--green), var(--green-dark));
+	min-height: 100vh;
+}
+.signIn_page > header > svg {
+	height: 100%;
+	fill: var(--white);
+}
+.signIn_page > form {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	background-color: var(--white);
+}
+.signIn_page > form > label,
+.signIn_options p {
+	font-weight: 600;
+	font-size: 0.8rem;
+}
+.signIn_options button {
+	margin-bottom: 0.8rem;
+	font-weight: 600;
+}
+.signIn_options p {
+	margin-bottom: 0.8rem;
+	text-align: center;
+}
+.divider_wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0rem;
+}
+.divider_wrapper p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--white);
+	width: fit-content;
+	padding: 0.4rem 1rem;
+	z-index: 3;
+}
+.divider {
+	border: 1px solid var(--smoke);
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	z-index: 2;
+}
+.auth_action_confirmation {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1.5rem;
+}
+.auth_action_confirmation > span,
+.auth_action_confirmation > button {
+	flex: 1;
+}
+.auth_action_confirmation > span > input {
+	margin-right: 0.5rem;
+}
+.auth_action_confirmation > button {
+	padding: 0.8rem;
+	font-weight: 600;
+}

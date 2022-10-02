@@ -1,0 +1,6 @@
+.input {
+	padding: 0.6rem 0.8rem;
+	border: 1px solid var(--black);
+	border-radius: var(--radius-sm);
+	margin: 0.4rem 0rem 1rem 0rem;
+}
