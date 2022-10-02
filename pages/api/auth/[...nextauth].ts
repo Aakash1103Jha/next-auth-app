@@ -18,9 +18,9 @@ const AuthOptions: NextAuthOptions = {
 			authorize: async (credentials, req) => {
 				//TODO: Test with real data and login/register flow
 				const { email, password, action } = credentials as IAuthRequestData;
-				if (action === AUTH_ACTION_TYPE.SIGN_IN) {
-					return await signInCtrl({ email, password });
-				}
+				// if (action === AUTH_ACTION_TYPE.SIGN_IN) {
+				// 	return await signInCtrl({ email, password });
+				// }
 				if (action === AUTH_ACTION_TYPE.SIGN_UP) {
 					return await signUpCtrl({ email, password });
 				}
