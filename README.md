@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Auth App
+
+## A simple application using `next-auth`, implementing `credentials` provider.
 
 ## Getting Started
 
-First, run the development server:
+-   Clone or download the project code.
+-   Install dependencies by running `npm install` in the project root directory.
+-   Run `npm run dev` to start up the development server.
+-   Run `npm run build && npm start` to first build and then start the app in production mode.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Configurations
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Add these variables in your `.env` file before running the app:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+-   `MONGODB_URI`
+-   `NEXTAUTH_URL`
+-   `NEXTAUTH_SECRET`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Structure
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+-   Homepage `/` is where you get `SIGN IN` and `SIGN UP` button.
+-   Click the `SIGN IN` button to be taken to the auth page to enter your credentials - `email` and `password`.
+-   When you finally submit, for now, nothing actually happens in terms of logic, though every thing is in place. For the actual logic to take over, open `./pages/api/auth/[...nextauth].ts` and change `return {email}` to `return null`.
+-   With this, once `email` and `password` is submitted, `MongoDB` will come into play, perform all the validations and work as it should.
 
-## Learn More
+## Challenges
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<span style="color: red; font-size: 14px">This app has already been deployed on Vercel, but `credentials` provider keeps failing with `FUNCTION_INVOCATION_TIMEOUT` error. Working on a workaround/solution.</span>
